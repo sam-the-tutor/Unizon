@@ -7,7 +7,7 @@ const path = require("path")
 const methodOverride = require("method-override")
 const session = require('express-session')
 const MemorySore = require('memorystore')(session)
-
+const Port = Process.env.PORT || 5001
 
 const restricted = require('./authRestricted')
 const {User,products,shops} = require('./models/model.js')
@@ -22,7 +22,7 @@ const expressLayouts = require('express-ejs-layouts')
 const bodyParser = require('body-parser')
 
 
-var server = app.listen('5001', function() {
+var server = app.listen(Port, function() {
     console.log('server listening at', server.address())
 })
 
