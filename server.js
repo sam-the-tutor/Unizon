@@ -5,8 +5,10 @@ const shopRouter = require('./routes/shops')
 const dashRouter = require('./routes/dashboard')
 const path = require("path")
 const methodOverride = require("method-override")
-
 const session = require('express-session')
+const MemorySore = require('memorystore')(session)
+
+
 const restricted = require('./authRestricted')
 const {User,products,shops} = require('./models/model.js')
 const productRouter = require('./routes/product')
@@ -43,6 +45,9 @@ sessionConfig={
 		httpOnly: true, // means no access from javascript
 		SameSite:"None"
 	},
+	store: new MemorySore({
+		checkPeriod: 86400000
+	})
 	resave: false,
 	saveUninitialized: true, // set it to false for production
 	
