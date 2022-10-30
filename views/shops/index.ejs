@@ -1,0 +1,22 @@
+
+ <%- include('../partials/dashboard_header.ejs') %>
+ <div>
+ <h2> Your Shops</h2>
+
+ 
+
+<% shops.forEach(shop =>{%>
+     <a href = "/shops/<%=shop._id%>/details">
+    <img width ="50px" height="50px" src="<%=shop.imgUrl%>" >
+     </a>
+     
+
+    <p><%=shop.name%></p>
+    
+
+   
+    
+    <% })%>
+    
+    
+</div>

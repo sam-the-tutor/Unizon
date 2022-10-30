@@ -1,0 +1,41 @@
+ <%- include('../partials/dashboard_header.ejs') %>
+
+
+
+<h2> Edit Product</h2>
+
+
+<form action=`./:id?_method=PUT` method= "POST" enctype='multipart/form-data'>
+  <fieldset>
+    <legend>Edit Product:</legend>
+    Product Name:<br>
+    <input type="text" name="p_name" value="<%=products[0].product_name%>">
+    <br><br>
+    Sub Category:<br>
+    <input type="text" name="p_category" value="<%= products[0].sub_category %>">
+    <br><br>
+    Product Description:<br>
+    <input type="text" name="p_desc" value="<%= products[0].product_description %>">
+    <br><br>
+    Price:<br>
+    <input type="text" name="p_price" value="<%=products[0].price %>">
+    <br><br>
+    Shop:<br>
+    <p>Select a shop to list your product</p>
+    <input type="text" name="p_shop" value="<%= products[0].shop%>" >
+    <br><br>
+    
+
+    Upload your file:<br>
+    <input type="file" name="img" >
+    <br>
+    <br>
+
+    
+     <input type="submit" value="Update">
+  </fieldset>
+</form>
+<a href ="/shops/products"><input type="submit" value="Cancel"></a>
+<form action="./:id" method= "POST" enctype='multipart/form-data'>
+<input type="submit" value ="Delete"
+</form>

@@ -1,0 +1,39 @@
+ <%- include('../partials/dashboard_header.ejs') %>
+
+
+ <form action="./" method= "POST">
+  <fieldset>
+    <legend>Subscribe to the Channel:</legend>
+    Channel:
+    <select name ="channel_no">
+    <option label = "<%=Chan.channel_name%>" value="<%=Chan.channel_no%>" selected>
+    </select>
+    <br><br>
+
+
+    Choose  location to list:
+    <br>
+      <select name = "channel_location">
+      <% Chan['location'].forEach(su =>{%>
+
+      <option label ="<%= su.name%>" value ="<%=su._id%>">
+      <% })%>
+      </select>
+      <br><br>
+
+
+
+    Choose  shop to list in the channel:
+    <br>
+      <select name = "Shop_id">
+      <% Shops.forEach(su =>{%>
+
+      <option label ="<%= su.name%>" value ="<%=su._id%>">
+      <% })%>
+      </select>
+      <br><br>
+
+    <input type="submit" value="Subscribe">
+  </fieldset>
+</form>
+

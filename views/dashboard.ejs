@@ -1,0 +1,10 @@
+
+
+ <%- include('./partials/dashboard_header.ejs') %>
+<% if(auth){%>
+
+
+
+<input type="submit" value="<%auth.email%>">
+<a href ="/shops/new"> shops</a>
+<%}%>

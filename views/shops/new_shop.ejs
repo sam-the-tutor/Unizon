@@ -1,0 +1,22 @@
+ <%- include('../partials/dashboard_header.ejs') %>
+
+
+
+<form action="../shops/new" method= "POST" enctype='multipart/form-data'>
+  <fieldset>
+    <legend>Create a New Shop:</legend>
+    
+    Shop Name:<br>
+    <input type="text" name="s_name" placeholder ="Enter your Shop Name" required= true>
+    <br><br>
+    
+    
+    Upload your business Board:<br>
+    <input type="file" name="img">
+    <br>
+    <br>
+
+    <input type="submit" value="Create">
+  </fieldset>
+</form>
+

@@ -1,0 +1,37 @@
+ <%- include('../partials/dashboard_header.ejs') %>
+
+
+
+ <div>
+ <h2> Your Channels</h2>
+ <div>
+<% Your_channels.forEach(channel =>{%>
+    <a href = "/channels/<%=channel._id%>">
+    <img width ="50px" height="50px" src="./public/uploads.medical.jpeg" >
+    </a>
+    <p>Channel Name:<%= channel.channel_name%></p>
+
+    <% })%>
+    
+    </div>
+</div>
+
+<div>
+
+
+<div>
+ <h2> All Channels</h2>
+ <div>
+<% All_channels.forEach(channel =>{%>
+    <a href = "/channels/subscribe/<%=channel._id%>/">
+    <img width ="50px" height="50px" src="./public/uploads.medical.jpeg" >
+    </a>
+    <p>Channel Name:<%= channel.channel_name%></p>
+   
+    <p>Verified: <%=channel.verified%></p>
+    <% })%>
+    
+    </div>
+</div>
+
+<div>

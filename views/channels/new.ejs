@@ -1,0 +1,29 @@
+ <%- include('../partials/dashboard_header.ejs') %>
+
+
+
+
+
+<form action="../channels/new" method= "POST">
+  <fieldset>
+    <legend>Create a New Channel:</legend>
+    
+    Channel Name:<br>
+    <input type="text" name="c_name" placeholder ="Enter your Shop Name" required= true>
+    <br><br>
+    Phone Number:<br>
+    <input type="text" name="c_number" placeholder ="Enter your shop Description" required= true>
+    <br><br>
+    Location:<br>
+    <input type="text" name="c_location" placeholder ="Enter your shop Description" required= true>
+    <br><br>
+    
+    Upload your business Board:<br>
+    <input type="file" name="img">
+    <br>
+    <br>
+
+    <input type="submit" value="Create">
+  </fieldset>
+</form>
+

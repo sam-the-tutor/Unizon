@@ -1,0 +1,44 @@
+<div>
+ <h2> Shop Page.</h2>
+    <div>
+
+    
+    <img width ="50px" height ="50px" src='<%=details.imgUrl%>'>
+    <p><%= details.name%></p>
+    <a href = "/shops/<%=details._id%>/details"> Edit </a>
+    <form method="POST" action="/shops/<%=details._id%>?_method=delete">
+    <button type="submit">Delete</button>
+    </form>
+    <br><br>
+   </div 
+   <div 
+     
+     <br>
+
+     <% if(products.length < 1){%>
+        <p>No products yet</p>
+
+        <% }else{%>
+            <h5> Your Products</h5>
+            <%products.forEach(product =>{%>
+                
+                <img width ="50px" height ="50px" src='<%=product.image_url%>'>
+                <p><%=product.product_name%>
+                <a href = "/shops/<%=product._id%>/details"> Edit </a>
+
+                    <form method="POST" action="/shops/product/<%=product._id%>?_method=delete">
+                    <button type="submit">Delete</button>
+                <%})%>
+
+            <%}%>
+
+    
+
+
+
+   </div>
+
+
+   
+    
+</div>

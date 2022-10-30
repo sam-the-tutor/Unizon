@@ -1,0 +1,41 @@
+ <%- include('../partials/dashboard_header.ejs') %>
+
+<h2> New Product</h2>
+
+
+<form action="./new" method= "POST" enctype='multipart/form-data'>
+  <fieldset>
+    <legend>Create a New Product:</legend>
+    
+    Product Name:<br>
+    <input type="text" name="p_name" placeholder ="Enter your Product Name" required= true>
+    <br><br>
+     Sub Category:
+      <select name = "sub_category">
+      <% Subc.forEach(su =>{%>
+
+      <option label ="<%= su.sub_name%>" value ="<%=su._id%>">
+      <% })%>
+      </select>
+
+
+    <br><br>
+    Shops:
+      <select name = "shop">
+      <% shops.forEach(su =>{%>
+
+      <option label ="<%= su.name%>" value ="<%=su._id%>">
+      <% })%>
+      </select>
+
+    <br><br>
+    
+
+    Upload your file:<br>
+    <input type="file" name="img" required=true multiple >
+    <br>
+    <br>
+
+    <input type="submit" value="Create">
+  </fieldset>
+</form>

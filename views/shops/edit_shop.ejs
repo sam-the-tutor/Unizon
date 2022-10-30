@@ -1,0 +1,26 @@
+ <%- include('../partials/dashboard_header.ejs') %>
+
+
+
+<form action="../shops/new" method= "POST" enctype='multipart/form-data'>
+  <fieldset>
+    <legend>Edit Shop Details:</legend>
+    
+    Shop Name:<br>
+    <input type="text" name="s_name" placeholder ="Enter your Shop Name">
+    <br><br>
+    
+    Shop Description:<br>
+    <input type="text" name="s_desc" placeholder ="Enter your shop Description">
+    <br><br>
+    
+
+    Upload your file:<br>
+    <input type="file" name="img" multiple>
+    <br>
+    <br>
+
+    <input type="submit" value="Create">
+  </fieldset>
+</form>
+

@@ -1,0 +1,10 @@
+ 
+ <%- include('../partials/dashboard_header.ejs') %>
+ <div>
+ <h2> Your Products</h2>
+<% products.forEach(product =>{%>
+    <a href="./products/<%=product._id%>"><img width ="50px" height="50px" src="./public/uploads.medical.jpeg" >
+    <p><%=product.product_name%></p>
+    <% })%>
+    </a>
+</div>
