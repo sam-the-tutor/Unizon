@@ -7,7 +7,7 @@ const path = require("path")
 const methodOverride = require("method-override")
 const session = require('express-session')
 const MemorySore = require('memorystore')(session)
-const Port = Process.env.PORT || 5001
+const Port = process.env.PORT || 5001
 
 const restricted = require('./authRestricted')
 const {User,products,shops} = require('./models/model.js')
