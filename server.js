@@ -47,7 +47,7 @@ sessionConfig={
 	},
 	store: new MemorySore({
 		checkPeriod: 86400000
-	})
+	}),
 	resave: false,
 	saveUninitialized: true, // set it to false for production
 	
